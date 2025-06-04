@@ -1,9 +1,12 @@
+
 # Experiment 4: DeFi Lending and Borrowing Protocol
 # Aim:
 To build a decentralized lending protocol where users can deposit assets to earn interest and borrow assets by providing collateral. This experiment introduces concepts like overcollateralization, liquidity pools, and interest accrual in DeFi.
 
 # Algorithm:
-Step 1: Setup Lending and Borrowing Mechanism
+
+### Step 1: Setup Lending and Borrowing Mechanism
+
 Users deposit ETH into the contract as liquidity.
 
 
@@ -16,16 +19,18 @@ Borrowers can borrow ETH but must provide collateral (e.g., 150% of the borrowed
 Interest on borrowed funds is calculated dynamically based on utilization rate.
 
 
-Step 2: Implement Overcollateralization
+### Step 2: Implement Overcollateralization
+
 If a borrower’s collateral value drops below a certain liquidation threshold, their collateral is liquidated to repay the debt.
 
 
-Step 3: Allow Liquidation
+### Step 3: Allow Liquidation
+
 If collateral < liquidation threshold, liquidators can repay the borrower's debt and claim their collateral at a discount.
 
 
 
-Program:
+# Program:
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
@@ -74,6 +79,8 @@ contract DeFiLending {
 
 ```
 # Expected Output:
+
+```
 Users can deposit ETH and earn interest.
 
 
@@ -81,10 +88,18 @@ Users can borrow ETH by providing collateral.
 
 
 If collateral < 150% of borrowed amount, liquidators can seize the collateral.
+```
 
+![4 1](https://github.com/user-attachments/assets/2f5e68d3-b640-4e72-afde-be0ad19526df)
+
+![4 2](https://github.com/user-attachments/assets/8f02fb23-da1b-43eb-a06f-90585ec7baf8)
+
+![4 3](https://github.com/user-attachments/assets/6d5cf1b4-40eb-443d-9881-926d38b3b485)
 
 
 # High-Level Overview:
+
+```
 Teaches key DeFi concepts: lending, borrowing, collateral, liquidation.
 
 
@@ -92,6 +107,8 @@ Introduces risk management: overcollateralization and liquidation.
 
 
 Directly related to DeFi protocols like Aave and Compound.
+```
 
 # RESULT : 
 
+Thus, a DeFi Lending and Borrowing Protocol has been successfully built and implenmented on Remix - Ethereum IDE
